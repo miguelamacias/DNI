@@ -1,11 +1,16 @@
 package application;
+import com.google.common.primitives.Ints;
 //DNI.java
 //Clase que ofrece varias utilidades referentes al DNI.
 public class DNI {
-	public boolean compruebaNumDNI(String numeroDNI) { //Comprueba si una String es un número válido de DNI
+	private boolean compruebaNumDNI(String numeroDNI) { //Comprueba si una String es un número válido de DNI
 		//Comprueba que el DNI introducido contiene 8 carácteres usando String.length
 		if (numeroDNI.length() == 8) {
-			return true;
+			if (Ints.tryParse(numeroDNI) != null) {
+				return true;
+			} else {
+				return false;
+			}
 		} else {
 			return false;
 		}
@@ -68,7 +73,7 @@ public class DNI {
 	public boolean compruebaDNI(String dni) { //Comprueba si un DNI es válido
 		String numero;
 		String letra;
-		if (dni.length() == 9) { //Primero se comprueba que la String tenga 9 carácteres
+		if (dni.length() == 9 && Ints.tryParse(dni.substring(0, 8)) != null) { //Primero se comprueba que la String tenga 9 carácteres
 			//Se divide el DNI en el número y en la letra
 			numero = dni.substring(0, 8);
 			letra = dni.substring(8);
