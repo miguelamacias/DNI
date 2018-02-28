@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DniController">
+   <children>
+      <Pane maxHeight="244.0" maxWidth="284.0" minHeight="244.0" minWidth="284.0" prefHeight="244.0" prefWidth="284.0">
+         <children>
+            <Button fx:id="calcular" layoutX="22.0" layoutY="99.0" mnemonicParsing="false" onAction="#BotonCalculo" text="Calcular Letra" />
+            <Label layoutX="22.0" layoutY="142.0" text="La letra del DNI es:" />
+            <Label fx:id="resultado" layoutX="164.0" layoutY="142.0" prefHeight="21.0" prefWidth="59.0" />
+            <TextField fx:id="entrada" layoutX="22.0" layoutY="59.0" prefHeight="31.0" prefWidth="238.0" promptText="Introduce el NIF" />
+            <Label layoutX="22.0" layoutY="14.0" prefHeight="38.0" prefWidth="227.0" text="Cálculo DNI / NIE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="verificar" layoutX="136.0" layoutY="99.0" mnemonicParsing="false" onAction="#BotonVerificar" prefHeight="31.0" prefWidth="124.0" text="Verificar Letra" />
+            <Label layoutX="22.0" layoutY="174.0" text="El NIF es:" />
+            <Label fx:id="resulVerificar" layoutX="96.0" layoutY="174.0" prefHeight="21.0" prefWidth="59.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="224.0" text="Creado por Miguel Ángel Macías">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
