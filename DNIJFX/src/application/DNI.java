@@ -16,7 +16,6 @@ public class DNI {
 		} else {
 			return false;
 		}
-
 	}
 
 	private String calculoLetra(String numeroDNI) { //Calcula la letra del DNI
@@ -75,16 +74,15 @@ public class DNI {
 	}
 
 	private boolean compruebaDNI(String dni) { //Comprueba si un DNI es válido
-			//Se divide el DNI en el número y en la letra
-			String numero = dni.substring(0, 8); //Los 8 primeros carácteres son el número
-			String letra = dni.substring(8); //el 9 es la letra
+		//Se divide el DNI en el número y en la letra
+		String numero = dni.substring(0, 8); //Los 8 primeros carácteres son el número
+		String letra = dni.substring(8); //el 9 es la letra
 
-			if (letra.equalsIgnoreCase(calculoLetra(numero))) { //Se calcula la letra correspondiente a ese número y se mira si es igual a la introducida
-				return true;
-			} else {
-				return false;
-			}
-
+		if (letra.equalsIgnoreCase(calculoLetra(numero))) { //Se calcula la letra correspondiente a ese número y se mira si es igual a la introducida
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public String calculoNIF(String numeroNIF) { //Calcula cualquier tipo de NIF, tanto NIE como DNI.
