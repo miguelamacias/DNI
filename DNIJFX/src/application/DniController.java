@@ -57,7 +57,7 @@ public class DniController {
     private void BotonVerificar(ActionEvent event) {
         // Button was clicked, do something...
     	resultado.setText("");
-		if (dni.compruebaDNI(entrada.getText())) {
+		if (dni.compruebaNIF(entrada.getText())) {
 			resulVerificar.setText("Válido");
 			resulVerificar.setTextFill(Color.GREEN);
 		} else {
