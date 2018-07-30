@@ -15,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
 public class DniController {
-	DNI dni = new DNI();
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -49,7 +48,7 @@ public class DniController {
     private void BotonCalculo(ActionEvent event) {
         // Button was clicked, do something...
     	resultado.setText("");
-        resultado.setText(dni.calculoNIF(entrada.getText()));
+        resultado.setText(DNI.calculoNIF(entrada.getText()));
         resulVerificar.setText("");
     }
 
@@ -57,7 +56,7 @@ public class DniController {
     private void BotonVerificar(ActionEvent event) {
         // Button was clicked, do something...
     	resultado.setText("");
-		if (dni.compruebaNIF(entrada.getText())) {
+		if (DNI.compruebaNIF(entrada.getText())) {
 			resulVerificar.setText("Válido");
 			resulVerificar.setTextFill(Color.GREEN);
 		} else {
