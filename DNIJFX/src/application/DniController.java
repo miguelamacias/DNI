@@ -60,8 +60,11 @@ public class DniController {
 			resulVerificar.setText("Válido");
 			resulVerificar.setTextFill(Color.GREEN);
 		} else {
-			resulVerificar.setText("Erróneo");
 			resulVerificar.setTextFill(Color.RED);
+			resulVerificar.setText("Erróneo");
+			resultado.setText(DNI.calculoNIF(entrada.getText().substring(0, 8)));
+
+
 		}
 	}
 }

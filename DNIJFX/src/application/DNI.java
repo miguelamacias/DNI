@@ -20,7 +20,7 @@ public class DNI {
 
 	private static String calculoLetra(String numeroDNI) { //Calcula la letra del DNI
 		/* Se convierte la String numeroDNI a un entero y luego se calcula la letra
-		del DNI con un Switch, cada case devuelve directamente la letra correspondiente */
+		del DNI con una array */
 		String[] letras = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
 		return letras[Integer.parseInt(numeroDNI) % 23];
 
@@ -42,6 +42,7 @@ public class DNI {
 		if (compruebaFormatoNIF(numeroNIF)) { //primero se comprueba que el NIF cumpla el formáto genérico
 			String letra = numeroNIF.substring(0, 1);//se separa el primer carácter
 			String numero = numeroNIF.substring(1, 8);//del resto del NIF
+
 			if (letra.equalsIgnoreCase("X")) {//Se mira si el primer carácter del NIF es una X y la sustituye por un 0
 				return calculoLetra(String.format("0%s", numero));
 			} else if (letra.equalsIgnoreCase("Y")) {//Se mira si el primer carácter es una Y y la sustituye por un 1
@@ -58,6 +59,7 @@ public class DNI {
 		if (NIF.length() == 9 && compruebaFormatoNIF(NIF.substring(0, 8))) { //se comprueba que tenga 9 cifras y cumpla el formato general
 			String letra = NIF.substring(0, 1);//se separa el primer carácter del resto del NIF
 			String numero = NIF.substring(1, 9);//El resto del NIF
+
 			if (letra.equalsIgnoreCase("X")) {//Se mira si el primer carácter del NIF es una X y la sustituye por un 0 y se manda a comprobar
 				return compruebaDNI(String.format("0%s", numero));
 			} else if (letra.equalsIgnoreCase("Y")) {//Se mira si el primer carácter es una Y y la sustituye por un 1 y se manda a comprobar

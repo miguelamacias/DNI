@@ -21,7 +21,7 @@
             </Label>
             <Button fx:id="verificar" layoutX="136.0" layoutY="99.0" mnemonicParsing="false" onAction="#BotonVerificar" prefHeight="31.0" prefWidth="124.0" text="Verificar Letra" />
             <Label layoutX="22.0" layoutY="174.0" text="El NIF es:" />
-            <Label fx:id="resulVerificar" layoutX="96.0" layoutY="174.0" prefHeight="21.0" prefWidth="59.0">
+            <Label fx:id="resulVerificar" layoutX="96.0" layoutY="174.0" prefHeight="21.0" prefWidth="174.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
