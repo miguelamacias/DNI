@@ -26,7 +26,7 @@ public class DniController {
     private Label resultado; // Value injected by FXMLLoader
 
     @FXML // fx:id="entrada"
-    private TextField entrada; // Value injected by FXMLLoader
+    private TextField entrada;
 
     @FXML // fx:id="calcular"
     private Button calcular; // Value injected by FXMLLoader
